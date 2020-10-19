@@ -93,4 +93,21 @@ public class LinkedList {
 
         return head;
     }
+    static Node deleteLast(Node head)
+    {
+        if (head == null)
+            return null;
+
+        if (head.next == null) {
+            return null;
+        }
+        Node secLast = head;
+        while (secLast.next.next != null)
+            secLast = secLast.next;
+
+        // Change next of second last
+        secLast.next = null;
+
+        return head;
+    }
 }

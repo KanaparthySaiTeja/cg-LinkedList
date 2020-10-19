@@ -8,7 +8,7 @@ public class Mainclass {
         System.out.print("Before: ");
         List.show(head);
         System.out.print("After: ");
-        head = LinkedList.deleteFirst(head);
+        head = LinkedList.deleteLast(head);
         List.show(head);
     }
 }
