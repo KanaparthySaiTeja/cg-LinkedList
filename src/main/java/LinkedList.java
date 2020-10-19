@@ -48,7 +48,34 @@ public class LinkedList {
             head.next = temp;
         }
     }
-    public void show()
+    static Node GetNode(int data) {
+        return new Node(data);
+    }
+    static Node InsertPosition(Node headNode, int position, int data) {
+        Node head = headNode;
+        if (position < 1)
+            System.out.print("Invalid position");
+
+        if (position == 1) {
+            Node newNode = new Node(data);
+            newNode.next = headNode;
+            head = newNode;
+        } else {
+            while (position-- != 0) {
+                if (position == 1) {
+                    Node newNode = GetNode(data);
+                    newNode.next = headNode.next;
+                    headNode.next = newNode;
+                    break;
+                }
+                headNode = headNode.next;
+            }
+            if (position != 1)
+                System.out.print("Position out of range");
+        }
+        return head;
+    }
+    public void show(Node head)
     {
         Node node =head;
         while(node.next!=null){
