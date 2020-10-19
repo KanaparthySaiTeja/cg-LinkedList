@@ -83,4 +83,14 @@ public class LinkedList {
             node=node.next;
         }System.out.println(node.data);
     }
+    public static Node deleteFirst(Node head)
+    {
+        if (head == null)
+            return null;
+
+        Node temp = head;
+        head = head.next;
+
+        return head;
+    }
 }

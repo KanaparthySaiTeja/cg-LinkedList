@@ -3,13 +3,12 @@ public class Mainclass {
         LinkedList List=new LinkedList();
         Node head = LinkedList.GetNode(56);
         head.next = LinkedList.GetNode(30);
+        head.next.next = LinkedList.GetNode(70);
 
-        System.out.println("Before insertion: ");
+        System.out.print("Before: ");
         List.show(head);
-
-        int data = 12, pos = 2;
-        head = LinkedList.InsertPosition(head, pos, data);
-        System.out.println("After Insertion: ");
+        System.out.print("After: ");
+        head = LinkedList.deleteFirst(head);
         List.show(head);
     }
 }
