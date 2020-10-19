@@ -1,6 +1,7 @@
 public class LinkedList {
     Node head;
     public Node temp= null;
+    //uc1
     public void add(int data){
         Node node=new Node();
         node.data=data;
@@ -17,6 +18,7 @@ public class LinkedList {
             tempnode.next=node;//assigning node (which consists next as null) to tempnode (tempnode's next will become null now.)
         }
     }
+    //uc2
     public void addAtStart(int data) {
 
         Node node = new Node(data);
@@ -51,6 +53,7 @@ public class LinkedList {
     static Node GetNode(int data) {
         return new Node(data);
     }
+    //uc8
     static Node InsertPosition(Node headNode, int position, int data) {
         Node head = headNode;
         if (position < 1)
@@ -83,6 +86,7 @@ public class LinkedList {
             node=node.next;
         }System.out.println(node.data);
     }
+    //uc5
     public static Node deleteFirst(Node head)
     {
         if (head == null)
@@ -93,6 +97,7 @@ public class LinkedList {
 
         return head;
     }
+    //uc4
     public static int Insert(Node head, int data) {
         if (head == null)
             return 0;
@@ -111,7 +116,7 @@ public class LinkedList {
 
         return 0;
     }
-
+//uc6
     static Node deleteLast(Node head)
     {
         if (head == null)
@@ -129,6 +134,7 @@ public class LinkedList {
 
         return head;
     }
+    //uc7
     public static boolean searchList(Node head, int data)
     {
         if (head == null)
@@ -145,5 +151,41 @@ public class LinkedList {
         }
 
         return false;
+    }
+    //uc9
+    public int length()
+    {
+        Node temp=head;
+        int c = 0;
+        while(temp!=null)
+        {
+            temp=temp.next;
+            c++;
+        }
+        return c;
+    }
+    //uc9
+    public static Node removeValue(Node head, int value)
+    {
+        Node prev=head;
+        Node curr=head;
+        if (head == null)
+            return null;
+
+        if (head.data == value) {
+            head=curr.next;
+            return head;
+        }
+        while (prev.next != null)
+        {
+            if (prev.next.data == value)
+            {
+                curr = prev.next.next;
+                prev.next = curr;
+                return head;
+            }
+            prev=prev.next;
+        }
+        return head;
     }
 }
