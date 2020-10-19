@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-19T13:56:48" hostname="DESKTOP-UDL4V0I" time="0.003">
+<testsuite name="LinkedListTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-10-19T14:34:24" hostname="DESKTOP-UDL4V0I" time="0.023">
   <properties/>
-  <testcase name="searchListTest" classname="LinkedListTest" time="0.003"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="searchListTest" classname="LinkedListTest" time="0.004"/>
+  <testcase name="testLinkedList" classname="LinkedListTest" time="0.019"/>
+  <system-out><![CDATA[30
+56
+70
+Pos is: 2
+30
+40
+56
+70
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

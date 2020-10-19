@@ -93,6 +93,25 @@ public class LinkedList {
 
         return head;
     }
+    public static int Insert(Node head, int data) {
+        if (head == null)
+            return 0;
+
+        if (head.data == data) {
+            return 1;
+        }
+        int c = 1;
+        Node secLast = head;
+        while (secLast.next != null) {
+            c += 1;
+            if (secLast.next.data == data)
+                return c;
+            secLast = secLast.next;
+        }
+
+        return 0;
+    }
+
     static Node deleteLast(Node head)
     {
         if (head == null)
