@@ -1,6 +1,6 @@
 public class Mainclass {
     public static void main(String[] args) {
-        LinkedList List=new LinkedList();
+        /*LinkedList List=new LinkedList();
         Node head = LinkedList.GetNode(56);
         head.next = LinkedList.GetNode(30);
         head.next.next = LinkedList.GetNode(70);
@@ -9,6 +9,6 @@ public class Mainclass {
         List.show(head);
         System.out.print("After: ");
         head = LinkedList.deleteLast(head);
-        List.show(head);
+        List.show(head);*/
     }
 }

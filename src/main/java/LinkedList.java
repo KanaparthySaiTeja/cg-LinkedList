@@ -110,4 +110,21 @@ public class LinkedList {
 
         return head;
     }
+    public static boolean searchList(Node head, int data)
+    {
+        if (head == null)
+            return false;
+
+        if (head.data==data) {
+            return true;
+        }
+        Node secLast = head;
+        while (secLast.next!= null) {
+            if (secLast.next.data == data)
+                return true;
+            secLast = secLast.next;
+        }
+
+        return false;
+    }
 }
