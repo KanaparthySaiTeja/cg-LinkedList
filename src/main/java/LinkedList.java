@@ -32,6 +32,22 @@ public class LinkedList {
             head.next = temp;
         }
     }
+    //uc3
+    public void append(int data) {
+
+        Node newNode = new Node(data);
+        if (head == null) {
+
+            head = newNode;
+            temp =newNode;
+        }
+        else
+        {
+            Node temp = head;
+            head = newNode;
+            head.next = temp;
+        }
+    }
     public void show()
     {
         Node node =head;
