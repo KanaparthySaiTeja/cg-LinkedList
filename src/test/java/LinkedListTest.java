@@ -44,7 +44,6 @@ public class LinkedListTest {
         list.show(list.head);
         int total1=list.length();
         System.out.println("List Length: "+total1);
-
         list.head=list.removeValue(list.head,40);
         list.show(list.head);
         int total2=list.length();
