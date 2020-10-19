@@ -1,9 +1,9 @@
 public class Mainclass {
     public static void main(String[] args) {
         LinkedList list=new LinkedList();
-        list.add(70);
-        list.add(30);
-        list.add(56);
+        list.addAtStart(70);
+        list.addAtStart(30);
+        list.addAtStart(56);
         list.show();
     }
 }
